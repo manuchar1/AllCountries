@@ -7,7 +7,6 @@ import androidx.annotation.Keep
 data class CountriesItem(
     val area: Double?,
     val capital: String,
-    val currencies: List<Currency>,
     val flag: String,
     val latlng: List<Double>,
     val name: String,

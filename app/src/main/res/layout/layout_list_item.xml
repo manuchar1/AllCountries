@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="2dp"
-    app:cardElevation="10dp"
-    app:cardPreventCornerOverlap="false">
+    app:cardElevation="15dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_marginBottom="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,27 +14,30 @@
 
         <ImageView
             android:id="@+id/ivFlag"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="0dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:adjustViewBounds="true"
             android:padding="0dp"
-            android:scaleType="fitXY"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:scaleType="centerInside"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/container1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
 
 
         <LinearLayout
             android:id="@+id/container1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:orientation="vertical"
             android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivFlag">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFlag"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tvName"
@@ -41,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:text="Country name"
+                android:maxLines="1"
                 android:textColor="#000"
                 android:textSize="19sp" />
 
@@ -48,51 +53,37 @@
                 android:id="@+id/tvNativeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Native Name"
                 android:fontFamily="@font/poppins"
+                android:text="Native Name"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvCapital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Capital"
                 android:fontFamily="@font/poppins"
+                android:text="Capital"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvRegion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Region"
                 android:fontFamily="@font/poppins"
+                android:text="Region"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/tvPopulation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:text="Population"
-                android:fontFamily="@font/poppins"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tvArea"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Area"
-                android:fontFamily="@font/poppins"
                 android:textSize="15sp" />
 
 
-            <TextView
-                android:id="@+id/tvCurrency"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Currency"
-                android:fontFamily="@font/poppins"
-                android:textSize="15sp" />
 
 
         </LinearLayout>
