@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AllCountries</string>
+    <string name="common_error">Error Loading Data</string>
+</resources>
